@@ -1,0 +1,29 @@
+1 - Task Representation:
+  You have the basic properties (title, description, dueDate, priority) in your factory function. Are there any additional properties you want to include for each to-do item?
+
+2 - User Interface (UI):
+  How do you plan to interact with your to-do list? Will you have a web interface? If so, think about the structure and layout of your UI.
+
+3 - Adding To-Dos:
+  Consider how you'll allow users to add new to-dos. Will there be a form? What data validation or user feedback do you want to include?
+
+4 - Displaying To-Dos:
+  How will you display the list of to-dos? Will you have a separate view for completed and pending tasks?
+
+5 - Updating To-Dos:
+  Think about how users will update existing to-dos. Will they be able to edit the title, description, due date, or priority?
+
+6 -Removing To-Dos:
+
+  How will users delete to-dos they no longer need?
+7 - Persistence:
+  Do you want to store the to-dos locally (e.g., using browser storage) or on a server? This will affect how to-dos are saved between sessions.
+
+8 - User Feedback:
+  Consider providing feedback to users for successful operations or error handling.
+
+9 -Testing:
+  Plan how you'll test your application. This could include unit tests for your functions and integration tests for the overall functionality.
+
+10 - Scalability:
+  If your to-do list grows in complexity, consider how well your current design will scale. Are there any design patterns or architectural decisions you want to implement for future expansion?

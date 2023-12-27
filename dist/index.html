@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./main.js" defer></script>
+  <title>To-Do List</title>
+</head>
+<body>
+  <h1>HELLO LUCAS</h1>
+  <p>This is a ToDo List Project</p>
+  <p id="date"></p>
+  <p id="missing-days"></p>
+  <button id="btn-add-todo">Add ToDo</button>
+
+  <!-- ToDo Modal Content Form  -->
+  <div id="container-modal">
+    <div id="content-modal">
+      <form action="#" id="form-todo-add">
+        <label for="todo-title">Title:</label>
+        <input type="text" id="todo-title" name="todo-title" required>
+        <label for="todo-description">Details:</label>
+        <input type="text" id="todo-description" name="todo-description">
+        <label for="todo-priority">Priority:</label>
+        <label for="todo-radio-high">
+          <input type="radio" id="todo-radio-high" name="todo-priority" value="High">
+          High
+        </label>
+        <label for="todo-radio-normal">
+          <input type="radio" id="todo-radio-normal" name="todo-priority" value="Normal" checked>
+          Normal
+        </label>
+        <label for="todo-radio-low">
+          <input type="radio" id="todo-radio-low" name="todo-priority" value="Low">
+          Low
+        </label>
+        <label for="todo-dueDate">Due Date:</label>
+        <input type="date" id="todo-dueDate" name="todo-dueDate" required>
+        <div id="form-todo-buttons">
+          <button id="btn-cancel-todo">Cancel</button>
+          <button id="btn-send-todo">Enter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
