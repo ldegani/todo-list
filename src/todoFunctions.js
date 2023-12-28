@@ -1,6 +1,4 @@
-
-
-const todoList = (title, description, dueDate, priority) => {
+function createTodoList(title, description, dueDate, priority) {
 
   return { 
     title,
@@ -8,6 +6,6 @@ const todoList = (title, description, dueDate, priority) => {
     dueDate,
     priority,
    }
-}
+};
 
-export default todoList;
+export default createTodoList;

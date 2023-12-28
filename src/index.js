@@ -1,5 +1,5 @@
-import './normalize.css'
+import './normalize.css';
 import './style.css';
-import handlerDOM from './DOMmanipulation';
+import pageLoad from './pageLoad';
 
-handlerDOM();
+pageLoad();

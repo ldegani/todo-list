@@ -85,5 +85,7 @@ form button {
 }
 
 #form-todo-buttons {
-  gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
