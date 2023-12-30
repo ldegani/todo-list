@@ -1,6 +1,6 @@
 // import { format } from 'date-fns';
 import { todayData } from './dataManipulation';
-import createTodoList from './todoFunctions';
+import { handlerFormSubmit } from './todoFunctions';
 
 const handlerDOM = () => {
   updateDate();
@@ -29,7 +29,7 @@ function buttonAddTodo() {
   const modalForm = document.getElementById('container-modal');
   modalForm.style.display = 'block';
   
-  const formInputs = document.getElementById('form-todo-add');
+  // const formInputs = document.getElementById('form-todo-add');
   const btnCancelTodo = document.getElementById('btn-cancel-todo');
 
   btnCancelTodo.addEventListener('click', (e) => {
@@ -47,29 +47,16 @@ function buttonAddTodo() {
   });
 };
 
-function closeModal() {
+export function closeModal() {
   document.getElementById('container-modal').style.display = 'none';
-  cleanFormInfos();
+  resetFormInfos();
 };
 
-function cleanFormInfos() {
+function resetFormInfos() {
   document.getElementById('todo-title').value = '';
   document.getElementById('todo-description').value = '';
   document.getElementById('todo-dueDate').value = '';
   document.getElementById('todo-radio-normal').checked = true;
 }
-
-const handlerFormSubmit = (e) => {
-  e.preventDefault();
-  const title = document.getElementById('todo-title').value;
-  const description = document.getElementById('todo-description').value;
-  const dueDate = document.getElementById('todo-dueDate').value;
-  const priority = document.querySelector('input[name="todo-priority"]:checked').value;
-
-  const todoItem = createTodoList(title, description, dueDate, priority);
-
-  console.log(todoItem);
-  closeModal();
-};
 
 export default handlerDOM;

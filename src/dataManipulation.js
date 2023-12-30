@@ -10,6 +10,7 @@ export const todayData = () => {
   const missingDays = differenceInDays(testDate, todayDate)
 
   return {
+    todayDate,
     todayFormattedDate,
     missingDays,
   }
