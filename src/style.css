@@ -60,6 +60,12 @@ html {
   border-radius: 8px;
 }
 
+/* Error Message */
+
+#error-message {
+  color: red;
+}
+
 /* Form */
 
 #form-todo-add {

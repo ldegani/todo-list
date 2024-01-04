@@ -19,10 +19,12 @@ const updateDate = () => {
 
 const eventHandlers = () => {
   const btnTodoAdd = document.getElementById('btn-add-todo');
-  const btnFormTodoSubmit = document.getElementById('btn-submit-todo');
+  const btnFormTodoSubmit = document.getElementById('form-todo-add');
   
   btnTodoAdd.addEventListener('click', buttonAddTodo);
-  btnFormTodoSubmit.addEventListener('click', handlerFormSubmit);
+  btnFormTodoSubmit.addEventListener('submit', (e) => {
+    handlerFormSubmit(e);
+  });
 }
 
 function buttonAddTodo() {
