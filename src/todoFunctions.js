@@ -24,7 +24,6 @@ export const handlerFormSubmit = (e) => {
   const title = document.getElementById('todo-title').value;
   const description = document.getElementById('todo-description').value;
   const dueDate = document.getElementById('todo-dueDate').value;
-  console.log(dueDate);
   const priority = document.querySelector('input[name="todo-priority"]:checked').value;
   
   
@@ -34,11 +33,11 @@ export const handlerFormSubmit = (e) => {
   const todoItem = createTodoList(title, description, dueDate, priority);
   
   console.log(todoItem);
+  todoArrayModule.insertTodoItem(todoItem);
   closeModal();
 };
 
 function userDateValidation(userDate){
-  console.log('Function');
   const dateData = todayData();
   const dueDateFormatted = format(parseISO(userDate), 'dd / MM / yyyy');
 
@@ -60,3 +59,27 @@ function descriptionValidation(todoDescription){
   }
   return true;
 }
+
+const todoArrayModule = (() => {
+  let todoListArray = [];
+
+  function insertTodoItem(todoItem){
+      todoListArray.push(todoItem);
+      console.log(todoListArray);
+    };
+
+  function eliminateTodoItem(){
+    return;
+  }
+  
+  function getArray(){
+    return todoListArray
+  }
+
+
+  return {
+    insertTodoItem,
+    eliminateTodoItem,
+    getArray,
+  }
+})();
