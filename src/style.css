@@ -6,17 +6,18 @@
 :root {
   --font-standard: Montserat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-  --color-01: #FFFDEB;
-  --color-02: #FAEDCD;
-  --color-03: #CCD5AE;
-  --color-04: #788844;
-  --color-05: #545F30;
-  --color-06: #D02530;
-  --color-07: #9C1C24;
-  --color-08: #79151C;
-  --color-09: #66B7B4;
-  --color-10: #489996;
-  --color-fonts: #100A05;
+  --color-01: #F4F4F4; /* General background */
+  --color-02: #FFFFFF; /* Header/Footer/Card background */
+  --color-03: #89CFF0; /* Accent Color 1 */
+  --color-04: #B9E6DA; /* Accent Color 2 */
+  --color-05: #C0C0C0; /* Task Card border */
+  --color-06: #D3E5E7; /* Completed task */
+  --color-07: #FF6F61; /* Delete/Alert color */
+  --color-08: #; /*  */
+  --color-09: #; /*  */
+  --color-10: #; /*  */
+  --color-text-1: #333333; /* Primary text */
+  --color-text-2: #666666; /* Secondary text */
 
 }
 
@@ -29,8 +30,19 @@
 body,
 html {
   font-family: var(--font-standard);
-  color: var(--color-fonts);
+  color: var(--color-text-1);
+  background-color: var(--color-01);
   text-align: center;
+}
+
+#btn-add-todo{
+  background-color: var(--color-03);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+#btn-add-todo:hover{
+  background-color: var(--color-05);
 }
 
 /* Modal Container */
@@ -60,11 +72,58 @@ html {
   border-radius: 8px;
 }
 
-/* Error Message */
+/* To-Do Card */
 
-#error-message {
-  color: red;
+#todo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 1 auto;
+  border: 1px solid var(--color-05);
+  border-radius: 16px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  min-width: 150px;
+  max-width: 500px;
 }
+
+#todo-card-infos {
+  display: flex;
+  align-items: start;
+  text-align: start;
+  flex-direction: column;
+  margin: 0.5rem;
+}
+
+#checkbox-task-finished-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-03);
+}
+
+#checkbox-task-finished-btn:hover {
+  background-color: var(--color-04);
+}
+
+ #todo-card-infos > p {
+  margin: 0.125rem;
+ }
+
+ #todo-card #todo-card-delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-07);
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+ }
+
+ #todo-card > button > img {
+  width: 20px;
+  padding:0.125rem;
+ }
 
 /* Form */
 
@@ -94,4 +153,8 @@ form button {
   display: flex;
   justify-content: center;
   gap: 1rem;
+}
+
+button {
+  cursor: pointer;
 }

@@ -4,14 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./main.js" defer></script>
+  <link rel="icon" href="../src/imgs/favicon.svg">
   <title>To-Do List</title>
 </head>
 <body>
-  <h1>HELLO LUCAS</h1>
-  <p>This is a ToDo List Project</p>
+  <h1>Hi, Lucas</h1>
+  <p>This is your To-Do List Project</p>
   <p id="date"></p>
   <p id="missing-days"></p>
-  <button id="btn-add-todo">Add ToDo</button>
+  <button id="btn-add-todo">Add Task</button>
+
+  <!-- ToDo Card -->
+  <div id="todo-card">
+    <button id="checkbox-task-finished-btn"></button>
+    <div id="todo-card-infos">
+        <p id="todo-card-title">Task 1</p>
+        <p id="todo-card-details">Details 1</p>
+        <p id="todo-card-dueDate">Finish Date: 25/01/2024</p>
+    </div>
+    <button id="todo-card-delete-btn">
+      <img src="../src/imgs/delete-icon.png" alt="delete task icon button">
+    </button>
+  </div>
+
+  </div>
+
 
   <!-- ToDo Modal Content Form  -->
   <div id="container-modal">

@@ -13,7 +13,7 @@ const updateDate = () => {
   //DELETE LATER - JUST FOR CHECKING INFOS
   const todayParagraph = document.getElementById('date');
   const missingDaysParagraph = document.getElementById('missing-days');
-  todayParagraph.textContent = `Today - ${todayDate.todayFormattedDate}`;
+  todayParagraph.textContent = `Today is ${todayDate.todayFormattedDate}`;
   missingDaysParagraph.textContent = `${todayDate.missingDays} missing days.`;
 }
 
