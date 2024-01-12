@@ -20,11 +20,19 @@ const updateDate = () => {
 const eventHandlers = () => {
   const btnTodoAdd = document.getElementById('btn-add-todo');
   const btnFormTodoSubmit = document.getElementById('form-todo-add');
+  const btnFinishedToDo = document.getElementById('btn-task-finished');
+  const iconFinishedToDo = document.getElementById('btn-task-icon');
   
   btnTodoAdd.addEventListener('click', buttonAddTodo);
+
   btnFormTodoSubmit.addEventListener('submit', (e) => {
     handlerFormSubmit(e);
   });
+
+  btnFinishedToDo.addEventListener('click', () => {
+    btnFinishedToDo.classList.toggle('active');
+    iconFinishedToDo.classList.toggle('active');
+  })
 }
 
 function buttonAddTodo() {

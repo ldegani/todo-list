@@ -95,22 +95,39 @@ html {
   margin: 0.5rem;
 }
 
-#checkbox-task-finished-btn {
+#btn-task-finished {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 1px solid var(--color-03);
 }
 
-#checkbox-task-finished-btn:hover {
+#btn-task-finished:hover {
   background-color: var(--color-04);
 }
 
- #todo-card-infos > p {
-  margin: 0.125rem;
- }
+#btn-task-finished.active {
+  border: 1px solid var(--color-07);
+}
 
- #todo-card #todo-card-delete-btn {
+#btn-task-icon {
+  width: 30px;
+  height: 30px;
+  opacity: 0.2;
+}
+
+#btn-task-icon.active {
+  opacity: 1;
+}
+
+#todo-card-infos > p {
+  margin: 0.125rem;
+}
+
+#todo-card #todo-card-delete-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,12 +135,12 @@ html {
   width: 30px;
   height: 30px;
   border-radius: 8px;
- }
+}
 
- #todo-card > button > img {
+#btn-delete-task {
   width: 20px;
   padding:0.125rem;
- }
+}
 
 /* Form */
 
