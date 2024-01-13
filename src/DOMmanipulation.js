@@ -20,8 +20,8 @@ const updateDate = () => {
 const eventHandlers = () => {
   const btnTodoAdd = document.getElementById('btn-add-todo');
   const btnFormTodoSubmit = document.getElementById('form-todo-add');
-  const btnFinishedToDo = document.getElementById('btn-task-finished');
-  const iconFinishedToDo = document.getElementById('btn-task-icon');
+  const btnFinishedToDos = document.querySelectorAll('.btn-task-finished');
+  const iconFinishedToDos = document.querySelectorAll('.btn-task-icon');
   
   btnTodoAdd.addEventListener('click', buttonAddTodo);
 
@@ -29,10 +29,13 @@ const eventHandlers = () => {
     handlerFormSubmit(e);
   });
 
-  btnFinishedToDo.addEventListener('click', () => {
-    btnFinishedToDo.classList.toggle('active');
-    iconFinishedToDo.classList.toggle('active');
-  })
+  btnFinishedToDos.forEach((finishedToDo, index) => {
+    finishedToDo.addEventListener('click', () => {
+      console.log('click 1')
+      finishedToDo.classList.toggle('active');
+      iconFinishedToDos[index].classList.toggle('active');
+    });
+  });
 }
 
 function buttonAddTodo() {

@@ -14,8 +14,8 @@
   Think about how users will update existing to-dos. Will they be able to edit the title, description, due date, or priority?
 
 6 -Removing To-Dos:
-
   How will users delete to-dos they no longer need?
+
 7 - Persistence:
   Do you want to store the to-dos locally (e.g., using browser storage) or on a server? This will affect how to-dos are saved between sessions.
 
